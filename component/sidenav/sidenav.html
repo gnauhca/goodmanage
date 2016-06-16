@@ -1,0 +1,17 @@
+<ul>
+	<li v-for="(key,url) in navTree">
+		<template v-if="!url.replace">
+			<a href="javascript:void(0)" @click="clickSub(url)">{{key}}</a>
+			<ul class="side-second" v-show="url===show" transition="slide">
+				<li v-for="(seckey, securl) in url">
+					<a href="{{securl}}">{{seckey}}</a>
+				</li>
+			</ul>
+		</template>
+		<template v-else>
+			<li>
+				<a href="{{url}}">{{key}}</a>
+			</li>	
+		</template>
+	</li>
+</ul>

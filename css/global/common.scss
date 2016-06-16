@@ -1,0 +1,15 @@
+@import "reset";
+
+//transition for vue 
+.slide-transition {
+	height: 100%;
+	transition: height 1s;
+}
+
+.slide-enter {
+	height: 0;
+}
+
+.slide-leave {
+	height: 0;
+}
